@@ -1,0 +1,18 @@
+# Labeler configuration
+# Add labels to pull requests based on the paths of files being changed
+
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: ['*.md', 'docs/**/*']
+
+github-actions:
+  - changed-files:
+    - any-glob-to-any-file: ['.github/**/*']
+
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file: ['**/package*.json', '**/requirements*.txt', '**/Gemfile*', '**/go.mod', '**/go.sum', '**/Cargo.toml', '**/Cargo.lock']
+
+config:
+  - changed-files:
+    - any-glob-to-any-file: ['*.yml', '*.yaml', '*.json', '*.toml', '.gitignore', '.gitattributes']
